@@ -25,17 +25,15 @@ function esi_admin_menu() {
 	add_management_page( 'Easy Sheet Insert', 'Easy Sheet Insert', 'manage_options', 'easy-sheet-insert/esi-admin-page.php', 'esi_admin_page', 'dashicons-tickets');
 }
 
-function esi_admin_page( $atts ){
+function esi_admin_page( $atts ){	
 	//Get the API key from the URL Parameter
-	extract( shortcode_atts( array('param0' => 'API',), $atts ) );
-	$API = stripslashes(esc_attr(esc_html($_GET[$param0])));
+	$API = $_GET['API'];
 	if ( $API != ''){
 		update_option( 'esi_api', $API);
 		echo "<h3>API Saved</h3>";
 	}
 	//Get the Sheet ID from the URL Parameter
-	extract( shortcode_atts( array('param1' => 'SID',), $atts ) );
-	$SID = stripslashes(esc_attr(esc_html($_GET[$param1])));
+	$SID = $_GET['SID'];
 	if ( $SID != ''){
 		update_option( 'esi_sid', $SID);
 		echo "<h3>Sheet ID Saved</h3>";
