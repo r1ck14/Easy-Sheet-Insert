@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: Easy Sheet Insert
-Plugin URI: https://sysloventures.com
+Plugin URI: https://github.com/r1ck14
 Description: Adds shortcode to easily insert text from a Google sheet.
 Version: 1.0
 Author: Richard Gonzalez
-Author URI: https://sysloventures.com
+Author URI: https://github.com/r1ck14
 License: GPLv2 or later
 Text Domain: easy-sheet-insert
 */
